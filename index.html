@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emmanual_Januarie_Porfolio</title>
+        <link rel ="stylesheet" href="deco.css">
+        <script src="https://kit.fontawesome.com/256cd86622.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+<div id="header">
+<div class="container">
+    <nav>
+    <img id ="E" src="images/E.logo.png" class="logo" alt="Letter E logo"/>
+    <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i id="x-mark" class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i  id="bars"class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+        <p>Software Developer</p>
+        <h1> Hi, I'm <span>Emmanual</span><br>Januarie </h1>
+    </div>
+    </div>
+    </div>
+    <!------------------------About me section code----------->
+
+    <div id="about">
+        <div class="container">
+           <div class="row">
+            <div class="about-col-1">
+                <img src="images/About.jpg" alt="About us image">
+            </div>
+            <div class="about-col-2">
+                <h1 class= "sub-title">About Me</h1>
+                <p>As an aspiring professional in software development, 
+                    I am seeking a challenging opportunity in full-stack development. 
+                    I have gained valuable experience through several self-initiated projects and active participation in rigorous coding competitions,
+                     which have provided me with real-world work scenarios to further enhance my skillset.
+
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python Dev</span><br>Experience in Django <br> Experience creatings CRUD APIs with Python </li>
+                        <li> <span>.NET Framework</span><br>Exprienced in creating User Form with back end code<br> Created a CRUD application that connects to a database</li>
+                        <li> <span>Web dev</span><br>
+                            <ul>
+                                <li>Html</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>Nodejs</li>
+                                <li>REACT</li>
+                            </ul>
+                        </li>
+                        <li><span>Angular Projects </span></li>
+                        <!-- <li> <span>Java Dev</span><br>Enter some stuff you donw with java</li> -->
+                    </ul>
+                </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2019-2020</span><br>World skills COMPETITION</li>
+                            <li> <span>2019-2021</span><br>.NET and Web dev Training at Midlands</li>
+                            <!-- <li> <span>something-something</span><br>mention this something</li>
+                            <li> <span>somethin-something</span><br>mention this wsomething</li> -->
+                        </ul>
+                    </div>
+                        <div class="tab-contents" id ="education">
+                            <ul>
+                                <li><span>2019-2022</span><br>Web dev and .NET at Midlands</li>
+                                <li> <span>2023-current</span><br>Major in Python Dev<br> Major in web dev(HTML,CSS,Javascript)</li>
+                                <li><span>07/2023</span><br>Certiport ITs Python certificate</li>
+                                <li><span>10/2023</span><br>Certiport ITs HTML & CSS certificate</li>
+                                <!-- <li> <span>another entry</span><br>about this entry</li>
+                                <li> <span>another entry</span><br>about this entry</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div> 
+        </div>
+    </div>
+    <!------------------Portfolio---------------->
+  <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="/images/pizza.jpg" alt="Pizza section image">
+                <div class="layer">
+                    <h3>Pizza UI</h3>
+                    <p>The UI allows the user to select their type of pizza they want, and other neccessities.
+                        After they have selected, and clicked on checkout it will place the order and give a preperation time for the order</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <!--------# these are where you paste the link of your project-->
+            <div class="work">
+                <img src="/images/emp.webp" alt="Employess detail image">
+                <div class="layer">
+                    <h3>Employee Database</h3>
+                    <p>The UI allows the user to captured data of employees and stored it in a database. These data can be updated and deleted from the UI.</p>
+                        <a href="https://github.com/EmmanualJanuarie/Employee_Db"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="/images/Tasty2.webp" alt="Tasty image"><!--change to image of a tasty website-->
+                <div class="layer">
+                    <h3>Tasty.</h3>
+                    <p>How many delicious recipe do you forget, with tasty that will be history, tasty allows users to store personal journal entries of the recipes and also,
+                        post recipes to other users. Users can also sell products and share comements about the recipes they tried.
+                    </p>
+                        <a href="https://github.com/EmmanualJanuarie/Slumber"><i class="fa-solid fa-up-right-from-square"></i></a><!--Chnage to Tasty. link-->
+                </div>
+            </div>
+        </div>
+        <a href ="#" class="btn">See more</a>
+    </div>
+  </div>
+  </div>
+  <!----------Contact info----------->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>  
+              <p><i class="fa-solid fa-envelope"></i> emmanualjanuarie240@gmail.com</p>
+              <p><i class="fa-solid fa-square-phone"></i>+27747483364</p>
+              <div class="social-icons">
+              <a href="https://www.linkedin.com/in/emmanual-januarie-9ba580205?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BxDgp1MXhSnKDCWnbeCsU%2Fg%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/EmmanualJanuarie"><i class="fa-brands fa-github"></i></a></a>
+              </div>
+              <a href="/images/MyCV.pdf" class="btn btn2" download>Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name ="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input typr="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type ="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+  </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right ="0";
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px";
+        }
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzXbxpdYBua6Cx8Pw5VU-Xqmb9ouawK98Gkh9OU2BGND1qijlc4J8zQaNKLMQWXH-51Nw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML= "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML=""
+        }, 5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+    </body>
+    </html>
