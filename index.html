@@ -146,8 +146,8 @@
                 <form>
                     <input type="text" name="username" id="username" placeholder="Your Name" required>
                     <input type="email" name="email" id="email" placeholder="Your Email" required>
-                    <input type="text" name="subject" id="" placeholder="Subject" required>
-                    <textarea name="msg"  rows="6" placeholder="Your Message"></textarea>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    <textarea name="msg"  rows="6" id="msg" placeholder="Your Message"></textarea>
                     <button type ="submit" name="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
@@ -203,7 +203,10 @@
 <script>
     function sendEmail(){
        let paras = {
-    
+            name : document.getElementById('username').value,
+            email : document.getElementById('email').value,
+            subject : document.getElementById('username').value,
+            message : document.getElementById('username').value
        }
     }
 </script>
