@@ -143,7 +143,7 @@
               <a href="images/MyResume.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form  action="mailing/send-email.php" method="post">
+                <form  onsubmit="sendEmail(); reset(); return false;">
                     <input type="text" name="username" placeholder="Your Name" required>
                     <input type="email" name="email" id="email" placeholder="Your Email" required>
                     <input type="text" name="subject" placeholder="Subject" required>
