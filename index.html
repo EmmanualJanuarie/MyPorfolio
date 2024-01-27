@@ -143,12 +143,12 @@
               <a href="images/MyResume.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form  onsubmit="sendEmail(); reset(); return false;">
-                    <input type="text" name="username" placeholder="Your Name" required>
+                <form>
+                    <input type="text" name="username" id="username" placeholder="Your Name" required>
                     <input type="email" name="email" id="email" placeholder="Your Email" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea name="msg"  rows="6" placeholder="Your Message"></textarea>
-                    <button type ="submit" name="submit" class="btn btn2">Submit</button>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    <textarea name="msg"  rows="6" id="msg" placeholder="Your Message"></textarea>
+                    <button type ="submit" onclick="sendEmail()" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
@@ -202,22 +202,29 @@
 <!-- Script for sending email -->
 <script>
     function sendEmail(){
-        Email.send({
-            Host:"smtp.gmail.com",
-            Username: "tasty.creator.inc@gmail.com",
-            Password: "huxptneooxnemzgt",
-            To:"tasty.creator.inc@gmail.com",
-            From:document.getElementById('email').value,
-            Subject:"This is the subject",
-            Body:"This is the body"
-        }).then(
-            message => alert(message)
-        )
+       let paras = {
+            name : document.getElementById('username').value,
+            email : document.getElementById('email').value,
+            subject : document.getElementById('subject').value,
+            message : document.getElementById('msg').value
+       }
+
+       emailjs.send("service_7njwwzc", "template_zffju8h", paras).then(alert("Email sent!"))
     }
 </script>
 
-<!-- adding smtp script -->
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+    emailjs.init("a-D9t65y0oKkprbdr");
+})();
+</script>
 
+
+
+<!-- adding smtp script -->
 <script src="https://smtpjs.com/v3/smtp.js"></script>
     </body>
     </html>
