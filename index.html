@@ -145,7 +145,7 @@
             <div class="contact-right">
                 <form  action="mailing/send-email.php" method="post">
                     <input type="text" name="username" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
                     <input type="text" name="subject" placeholder="Subject" required>
                     <textarea name="msg"  rows="6" placeholder="Your Message"></textarea>
                     <button type ="submit" name="submit" class="btn btn2">Submit</button>
@@ -199,5 +199,23 @@
   })
 </script>
 
+<!-- Script for sending email -->
+<script>
+    function sendEmail(){
+        Email.send({
+            Host:"smtp.gmail.com",
+            Username: "tasty.creator.inc@gmail.com",
+            Password: "huxptneooxnemzgt",
+            To:"tasty.creator.inc@gmail.com",
+            From:document.getElementById('email').value,
+            Subject:"This is the subject",
+            Body:"This is the body"
+        })
+    }
+</script>
+
+<!-- adding smtp script -->
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
     </body>
     </html>
