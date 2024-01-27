@@ -210,7 +210,9 @@
             From:document.getElementById('email').value,
             Subject:"This is the subject",
             Body:"This is the body"
-        })
+        }).then(
+            message => alert(message)
+        )
     }
 </script>
 
