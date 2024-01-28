@@ -7,6 +7,17 @@
         <title>Emmanual_Januarie_Porfolio</title>
         <link rel ="stylesheet" href="deco.css" type="text/CSS">
         <script src="https://kit.fontawesome.com/256cd86622.js" crossorigin="anonymous"></script>
+
+        <!-- script -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("a-D9t65y0oKkprbdr");
+        })();
+        </script>
+
     </head>
     <body>
 <div id="header">
@@ -145,7 +156,7 @@
             <div class="contact-right">
                 <form>
                     <input type="text" name="username" id="username" placeholder="Your Name" required>
-                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <input type="email" name="email" id="email_id" placeholder="Your Email" required>
                     <input type="text" name="subject" id="subject" placeholder="Subject" required>
                     <textarea name="msg"  rows="6" id="message" placeholder="Your Message"></textarea>
                     <button type ="submit" onclick="sendEmail()" class="btn btn2">Submit</button>
@@ -203,26 +214,17 @@
 <script>
     function sendEmail(){
        let paras = {
-            name : document.getElementById('username').value,
-            email : document.getElementById('email').value,
+            from_name : document.getElementById('username').value,
+            email_id : document.getElementById('email_id').value,
             subject : document.getElementById('subject').value,
             message : document.getElementById('message').value
        }
-       emailjs.send("service_7njwwzc", "template_zffju8h", paras).then(alert("Message send!"))
+       emailjs.send("service_7njwwzc", "template_zffju8h", paras).then(alert("Message send!")).then(function(res){
+        alert("Message Send!!" + res.status);
+       })
 
     }
 </script>
-
-<script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-(function(){
-    emailjs.init("a-D9t65y0oKkprbdr");
-})();
-</script>
-
-
 
 <!-- adding smtp script -->
 <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
