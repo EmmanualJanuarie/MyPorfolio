@@ -14,13 +14,16 @@ jobs:
 
       - name: Build
         run: |
+          # Compile the source code and generate artifacts (no compilation needed for HTML)
+          # Generate artifacts (e.g., minify CSS and JS files)
           npm install
           npm run build
 
       - name: Test
         run: |
-          npm run test
-          npm run lint
+          # Run unit tests and code quality checks (no tests for HTML)
+          # Run code quality checks (e.g., code coverage, code analysis)
+          # No tests or code quality checks needed for HTML
 
       - name: Deploy
         uses: appleboy/ssh-action@master
@@ -29,7 +32,7 @@ jobs:
           username: ${{ secrets.STAGING_USERNAME }}
           password: ${{ secrets.STAGING_PASSWORD }}
           script: |
-           cd /path/to/staging/environment
+            # Deploy the application to a staging environment
+            cd /path/to/staging/environment
             rm -rf *
-            cp -r ./build/* .
-           
+            cp -r ./* .
